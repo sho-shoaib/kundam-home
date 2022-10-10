@@ -9,7 +9,7 @@ import ApproachGrid from "../components/ApproachGrid";
 const VisionMission = () => {
   return (
     <>
-      <div className='relative mt-24 pb-24 relative '>
+      <div className='relative mt-24 pb-28 relative '>
         <img
           src={blogBg}
           alt='blob_bg'

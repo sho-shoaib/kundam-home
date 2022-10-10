@@ -1,10 +1,10 @@
 import React from "react";
-import adherence from "../images/approachIcons/adherence.gif";
-import engineer from "../images/approachIcons/engineer.gif";
-import inventory from "../images/approachIcons/inventory.gif";
-import location from "../images/approachIcons/location.gif";
-import solution from "../images/approachIcons/solution.gif";
-import technical from "../images/approachIcons/technical.gif";
+import adherence from "../images/approachIcons/adherence.png";
+import engineer from "../images/approachIcons/engineer.png";
+import inventory from "../images/approachIcons/inventory.png";
+import location from "../images/approachIcons/location.png";
+import solution from "../images/approachIcons/solution.png";
+import technical from "../images/approachIcons/technical.png";
 
 const approachArr = [
   { icon: solution, name: "SOLUTION PROVIDER" },
