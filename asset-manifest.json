@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/kundam-home/static/css/main.bee8a694.css",
-    "main.js": "/kundam-home/static/js/main.3900430c.js",
+    "main.js": "/kundam-home/static/js/main.5a08e953.js",
     "static/media/bg-aproach.png": "/kundam-home/static/media/bg-aproach.5d7419d38f982356734b.png",
     "static/media/paper_bg.png": "/kundam-home/static/media/paper_bg.494bc5ae947e671230f5.png",
     "static/media/glitter_1.png": "/kundam-home/static/media/glitter_1.1da8fb3004cfca15e81a.png",
@@ -15,10 +15,10 @@
     "index.html": "/kundam-home/index.html",
     "static/media/blob_bg.svg": "/kundam-home/static/media/blob_bg.e24961900eed7710337d28857fae859b.svg",
     "main.bee8a694.css.map": "/kundam-home/static/css/main.bee8a694.css.map",
-    "main.3900430c.js.map": "/kundam-home/static/js/main.3900430c.js.map"
+    "main.5a08e953.js.map": "/kundam-home/static/js/main.5a08e953.js.map"
   },
   "entrypoints": [
     "static/css/main.bee8a694.css",
-    "static/js/main.3900430c.js"
+    "static/js/main.5a08e953.js"
   ]
 }
