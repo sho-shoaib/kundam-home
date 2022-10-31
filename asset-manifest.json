@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/kundam-home/static/css/main.bee8a694.css",
+    "main.js": "/kundam-home/static/js/main.3900430c.js",
+    "static/media/bg-aproach.png": "/kundam-home/static/media/bg-aproach.5d7419d38f982356734b.png",
+    "static/media/paper_bg.png": "/kundam-home/static/media/paper_bg.494bc5ae947e671230f5.png",
+    "static/media/glitter_1.png": "/kundam-home/static/media/glitter_1.1da8fb3004cfca15e81a.png",
+    "static/media/glitter_2.png": "/kundam-home/static/media/glitter_2.abd3d29223e1f055871f.png",
+    "static/media/vision.gif": "/kundam-home/static/media/vision.8d2a96ec1e3e6eefa845.gif",
+    "static/media/mission.gif": "/kundam-home/static/media/mission.2509667f29fff8b7ac8f.gif",
+    "static/media/navbarImg.png": "/kundam-home/static/media/navbarImg.a57609d9d11e2eae48d5.png",
+    "static/media/catalog-placeholder.jpg": "/kundam-home/static/media/catalog-placeholder.70f2aaa8e88bede13bbf.jpg",
+    "static/media/blue-elem.png": "/kundam-home/static/media/blue-elem.f4d1c18b43ce363fe227.png",
+    "static/media/technical.png": "/kundam-home/static/media/technical.85195b6b55a00e010fbd.png",
+    "index.html": "/kundam-home/index.html",
+    "static/media/blob_bg.svg": "/kundam-home/static/media/blob_bg.e24961900eed7710337d28857fae859b.svg",
+    "main.bee8a694.css.map": "/kundam-home/static/css/main.bee8a694.css.map",
+    "main.3900430c.js.map": "/kundam-home/static/js/main.3900430c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bee8a694.css",
+    "static/js/main.3900430c.js"
+  ]
+}
