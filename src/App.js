@@ -29,8 +29,8 @@ function App() {
       <NavbarHome />
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<HomeCombined />} />
-          <Route path='/about' element={<AboutPage />} />
+          <Route path='/kundam-home/' element={<HomeCombined />} />
+          <Route path='/kundam-home/about' element={<AboutPage />} />
         </Routes>
       </BrowserRouter>
       <Footer />
