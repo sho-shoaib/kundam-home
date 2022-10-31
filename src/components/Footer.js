@@ -3,6 +3,7 @@ import blueElem from "../images/blue-elem.png";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import EmailIcon from "@mui/icons-material/Email";
 import LanguageIcon from "@mui/icons-material/Language";
+import glitter1 from "../images/glitter_1.png";
 
 const data = [
   {
@@ -31,11 +32,17 @@ const data = [
 const Footer = () => {
   return (
     <footer className='relative -mt-10'>
+      <div
+        className='absolute left-0 bottom-0 -z-10'
+        style={{ transform: "scaleX(-1)" }}
+      >
+        <img src={glitter1} alt='glitter' className='w-full h-full' />
+      </div>
       <div className='w-full' style={{ height: "550px" }}>
         <img src={blueElem} alt='blueElem' className='w-full h-full' />
       </div>
       <div className='absolute bottom-0 right-3 w-3/5 h-1/2'>
-        <h1 className='text-5xl font-bold text-amber-300'>
+        <h1 className='text-4xl font-bold text-amber-300'>
           KUNDAN VALVES AND FORGINGS
         </h1>
         <div className='flex flex-col gap-4 mt-6'>
