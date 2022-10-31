@@ -20,7 +20,7 @@ const HomePage = () => {
           </h1>
           <div
             className='h-3 w-44'
-            style={{ backgroundColor: "rgba(254,1,0,0.8)" }}
+            style={{ backgroundColor: "rgba(254,1,0,0.7)" }}
           ></div>
           <div>
             <button
