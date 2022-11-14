@@ -42,7 +42,7 @@ const data = [
 
 const CatalogSlider = () => {
   return (
-    <Container className='pb-20'>
+    <Container className='pt-28' id='catalog'>
       <h1 className='sm:text-7xl text-5xl font-semibold leading-snug text-shadow mb-12 text-center'>
         OUR CATALOG
       </h1>

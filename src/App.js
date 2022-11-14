@@ -7,13 +7,17 @@ import CatalogSlider from "./pages/CatalogSlider";
 import Footer from "./components/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AboutPage from "./pages/AboutPage";
+import NavbarMain from "./components/NavbarMain";
+import Approach from "./pages/Approach";
 
 const HomeCombined = () => {
   return (
     <>
       <div>
         <HomePage />
+        <NavbarMain />
         <VisionMission />
+        <Approach />
         <CatalogSlider />
       </div>
     </>
@@ -32,8 +36,8 @@ function App() {
           <Route path='/kundam-home/' element={<HomeCombined />} />
           <Route path='/kundam-home/about' element={<AboutPage />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
-      <Footer />
     </Container>
   );
 }

@@ -1,18 +1,24 @@
 import React from "react";
 import { useState } from "react";
-import { Cobe } from "../components/Cobe";
-import glitter2 from "../images/glitter_2.png";
+import { useNavigate } from "react-router-dom";
+// import { Cobe } from "../components/Cobe";
+// import glitter2 from "../images/glitter_2.png";
+import video from "../images/video/home-vid.mp4";
 
 const HomePage = () => {
   const [btnHovered, setBtnHovered] = useState(false);
+  const navigate = useNavigate();
 
   return (
-    <div className='w-full h-screen flex flex-col justify-center change-margin-home'>
-      <div className='absolute top-0 left-0'>
-        <img src={glitter2} alt='glitter' />
-      </div>
-      <div className='px-4 flex items-center justify-between relative change-flex-sphere change-padding-home pl-20'>
-        <div className='inline-block flex flex-col gap-5 relative translate-y-10'>
+    <div
+      id='home'
+      className='w-full h-screen flex flex-col justify-center change-margin-home relative'
+    >
+      <div
+        className='px-4 flex items-center justify-between relative change-flex-sphere change-padding-home pl-20 z-10 h-full'
+        style={{ backgroundColor: "rgba(255,255,255,0.5)" }}
+      >
+        <div className='inline-block flex flex-col gap-5 relative'>
           <h1 className='sm:text-7xl text-5xl font-semibold leading-snug text-shadow change-align-home'>
             KUNDAN VALVES
             <br />
@@ -34,14 +40,21 @@ const HomePage = () => {
               }}
               onMouseOver={() => setBtnHovered(true)}
               onMouseOut={() => setBtnHovered(false)}
+              onClick={() => navigate("/kundam-home/about")}
             >
               Know More
             </button>
           </div>
         </div>
-        <div className='translate-y-24'>
+        {/* <div className='translate-y-24'>
           <Cobe />
-        </div>
+        </div> */}
+      </div>
+
+      <div className='absolute h-screen w-full overflow-hidden'>
+        <video autoPlay loop muted className='w-full object-cover h-full'>
+          <source src={video} type='video/mp4' />
+        </video>
       </div>
     </div>
   );

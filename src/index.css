@@ -9,7 +9,7 @@ body {
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #09264C;
+  color: #012D96;
 }
 
 code {
@@ -18,7 +18,7 @@ code {
 }
 
 .text-shadow {
-  text-shadow: 2px 2px 0px rgba(254,1,0,0.4);
+  text-shadow: 2px 2px 0px #FCBF02;
 }
 
 canvas{
@@ -50,4 +50,26 @@ canvas{
   .change-padding-home {
     padding-left: 0px;
   }
+}
+
+.para {
+  color: #5C3F05;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 600;
+}
+
+.para-white {
+  color: #ffff;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 600;
+}
+
+.add-before::before {
+  content: "";
+  height: 5px;
+  width: 100px;
+  background-color: #FF0101;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
 }
