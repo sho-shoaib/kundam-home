@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import catalogHolder from "../images/catalog-placeholder.jpg";
+import useWindowDimensions from "../components/getWindowDimensions";
 
 const data = [
   {
@@ -41,6 +42,8 @@ const data = [
 ];
 
 const CatalogSlider = () => {
+  const { width } = useWindowDimensions();
+
   return (
     <Container className='pt-28' id='catalog'>
       <h1 className='sm:text-7xl text-5xl font-semibold leading-snug text-shadow mb-12 text-center'>
@@ -49,7 +52,7 @@ const CatalogSlider = () => {
       <Swiper
         modules={[Navigation, Pagination, A11y]}
         spaceBetween={50}
-        slidesPerView={3}
+        slidesPerView={width > 1000 ? 3 : width > 650 ? 2 : 1}
         navigation
         pagination={{ clickable: true }}
         onSwiper={(swiper) => console.log(swiper)}

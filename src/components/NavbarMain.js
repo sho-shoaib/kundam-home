@@ -1,11 +1,11 @@
 import React from "react";
 import { Box, Container } from "@mui/system";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import MenuIcon from "@mui/icons-material/Menu";
+import { GrTwitter } from "react-icons/gr";
+import { AiOutlineInstagram } from "react-icons/ai";
+import { AiOutlineMenu } from "react-icons/ai";
 import useWindowDimensions from "./getWindowDimensions";
 import { Link } from "react-scroll";
-import CloseIcon from "@mui/icons-material/Close";
+import { GrClose } from "react-icons/gr";
 import { useState } from "react";
 import DiscordIcon from "../images/discordIcon.png";
 import logo from "../images/logo-kundan.png";
@@ -34,6 +34,7 @@ const NavbarHome = () => {
               justifyContent: "space-between",
               fontFamily: "Poppins !important",
             }}
+            maxWidth='xl'
           >
             <Link activeClass='active' to='home' spy={true} smooth={true}>
               <div className='w-32 cursor-pointer'>
@@ -78,21 +79,20 @@ const NavbarHome = () => {
                 target='_blank'
                 rel='noreferrer'
               >
-                <InstagramIcon sx={{ fontSize: 20 }} />
+                <AiOutlineInstagram style={{ fontSize: "20px" }} />
               </a>
               <a
                 href='https://twitter.com/nautz_'
                 target='_blank'
                 rel='noreferrer'
               >
-                <TwitterIcon sx={{ fontSize: 20 }} />
+                <GrTwitter style={{ fontSize: "20px" }} />
               </a>
 
               <a
                 href='https://discord.gg/nautz'
                 target='_blank'
                 rel='noreferrer'
-                style={{ marginTop: "4px" }}
               >
                 <img src={DiscordIcon} alt='discordIcon' className='w-5' />
               </a>
@@ -106,7 +106,7 @@ const NavbarHome = () => {
             <Container
               className='flex items-center justify-between py-4 z-50'
               style={{
-                backgroundColor: "rgb(19 23 114)",
+                backgroundColor: "#FCBF02",
               }}
             >
               <Link activeClass='active' to='home' spy={true} smooth={true}>
@@ -120,7 +120,7 @@ const NavbarHome = () => {
                   target='_blank'
                   rel='noreferrer'
                 >
-                  <TwitterIcon sx={{ fontSize: 30 }} />
+                  <GrTwitter style={{ fontSize: "29px" }} />
                 </a>
 
                 <a
@@ -128,7 +128,7 @@ const NavbarHome = () => {
                   target='_blank'
                   rel='noreferrer'
                 >
-                  <InstagramIcon sx={{ fontSize: 30 }} />
+                  <AiOutlineInstagram style={{ fontSize: "29px" }} />
                 </a>
 
                 <a
@@ -143,9 +143,9 @@ const NavbarHome = () => {
           </nav>
           <nav className='w-full sticky top-0 z-50'>
             <Box
-              className='w-full border-t-2 border-indigo-900 p-2 child:text-md child:font-medium child:cursor-pointer child-hover:opacity-80 child:transition child:ease-in flex gap-5 justify-center py-5 child:text-lg child:font-medium'
+              className='w-full border-t-2 border-yellow-600 p-2 child:text-md child:font-medium child:cursor-pointer child-hover:opacity-80 child:transition child:ease-in flex gap-5 justify-center py-5 child:text-lg child:font-medium'
               style={{
-                backgroundColor: "rgb(19 23 114)",
+                backgroundColor: "#FCBF02",
               }}
             >
               <Link activeClass='active' to='home' spy={true} smooth={true}>
@@ -180,11 +180,11 @@ const NavbarHome = () => {
       )}
       {width <= 550 && (
         <>
-          <nav className='z-50 w-full sticky top-0 relative'>
+          <nav className='z-50 w-full sticky top-0'>
             <Container
               className='flex items-center justify-between py-4 z-40'
               style={{
-                backgroundColor: "rgb(19 23 114)",
+                backgroundColor: "#FCBF02",
               }}
             >
               <Link activeClass='active' to='home' spy={true} smooth={true}>
@@ -198,7 +198,7 @@ const NavbarHome = () => {
                   target='_blank'
                   rel='noreferrer'
                 >
-                  <TwitterIcon sx={{ fontSize: 30 }} />
+                  <GrTwitter style={{ fontSize: "29px" }} />
                 </a>
 
                 <a
@@ -206,7 +206,7 @@ const NavbarHome = () => {
                   target='_blank'
                   rel='noreferrer'
                 >
-                  <InstagramIcon sx={{ fontSize: 30 }} />
+                  <AiOutlineInstagram style={{ fontSize: "29px" }} />
                 </a>
 
                 <a
@@ -217,9 +217,12 @@ const NavbarHome = () => {
                   <img src={DiscordIcon} alt='discordIcon' className='w-8' />
                 </a>
                 {isOpen ? (
-                  <CloseIcon sx={{ fontSize: 30 }} onClick={toggle} />
+                  <GrClose style={{ fontSize: "29px" }} onClick={toggle} />
                 ) : (
-                  <MenuIcon sx={{ fontSize: 30 }} onClick={toggle} />
+                  <AiOutlineMenu
+                    style={{ fontSize: "29px" }}
+                    onClick={toggle}
+                  />
                 )}
               </div>
             </Container>
@@ -227,11 +230,11 @@ const NavbarHome = () => {
               className={`overflow-hidden absolute w-full ${!isOpen && "h-0"}`}
             >
               <Box
-                className={`w-full border-t-2 border-indigo-700 p-2 child:text-lg child:font-medium child:cursor-pointer child-hover:opacity-80 child:transition child:ease-in flex flex-col gap-4 justify-center py-3 z-20 transition ${
+                className={`w-full border-t-2 border-yellow-600 p-2 child:text-lg child:font-medium child:cursor-pointer child-hover:opacity-80 child:transition child:ease-in flex flex-col gap-4 justify-center py-3 z-20 transition ${
                   isOpen ? "drop" : "up"
                 }`}
                 sx={{
-                  backgroundColor: "#2F339B",
+                  backgroundColor: "#FCBF02",
                 }}
               >
                 <Link activeClass='active' to='home' spy={true} smooth={true}>

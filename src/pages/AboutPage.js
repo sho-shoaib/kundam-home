@@ -1,6 +1,7 @@
 import { Container } from "@mui/material";
 import React from "react";
 import { useState } from "react";
+import useWindowDimensions from "../components/getWindowDimensions";
 
 const AboutPage = () => {
   const [dataText] = useState({
@@ -14,37 +15,64 @@ const AboutPage = () => {
     ],
   });
 
+  const { width } = useWindowDimensions();
+
   return (
     <Container sx={{ paddingTop: "180px" }}>
       <div className='flex flex-col gap-12'>
         <h1 className='sm:text-7xl text-5xl font-semibold leading-snug text-shadow change-align-home'>
           ABOUT US
         </h1>
-        <div className='flex flex-col'>
+        <div className='flex w-full flex-col'>
           {dataText.listItems.map((item, i) => {
-            return (
-              <div
-                key={i}
-                className={`text-center w-1/2 flex self-${
-                  i % 2 === 0
-                    ? "start justify-end border-r-4 ml-0.5 pr-8"
-                    : "end justify-start border-l-4 mr-0.5 pl-8"
-                } ${i === 0 && "pt-4"} ${
-                  i === dataText.listItems.length - 1 && "pb-4"
-                }`}
-                style={{ borderColor: "rgba(244,172,0, 0.5)" }}
-              >
+            if (width > 900) {
+              return (
                 <div
-                  style={{
-                    borderColor: "#FA9494",
-                    backgroundColor: "rgba(244,172,0, 0.1)",
-                  }}
-                  className={`text-center p-8 rounded-lg border-4 w-10/12`}
+                  key={i}
+                  className={`text-center w-1/2 flex ${
+                    i % 2 === 0
+                      ? "self-start justify-end border-r-4 ml-0.5 pr-8"
+                      : "self-end justify-start border-l-4 mr-0.5 pl-8"
+                  } ${i === 0 && "pt-4"} ${
+                    i === dataText.listItems.length - 1 && "pb-4"
+                  }`}
+                  style={{ borderColor: "rgba(244,172,0, 0.5)" }}
                 >
-                  <p className='text-lg'>{item}</p>
+                  <div
+                    style={{
+                      borderColor: "#FA9494",
+                      backgroundColor: "rgba(244,172,0, 0.1)",
+                    }}
+                    className={`text-center p-8 rounded-lg border-4 w-10/12`}
+                  >
+                    <p className='text-lg'>{item}</p>
+                  </div>
                 </div>
-              </div>
-            );
+              );
+            } else {
+              return (
+                <div
+                  key={i}
+                  className={`text-center my-4 flex self-center justify-center border-r-4 border-l-4  ${
+                    i === 0 && "pt-4"
+                  } ${i === dataText.listItems.length - 1 && "pb-4"}`}
+                  style={{
+                    borderColor: "rgba(244,172,0, 0.5)",
+                    maxWidth: "450px",
+                  }}
+                >
+                  <div
+                    style={{
+                      borderColor: "#FA9494",
+                      backgroundColor: "rgba(244,172,0, 0.1)",
+                    }}
+                    className={`text-center p-8 rounded-lg border-4 w-10/12`}
+                  >
+                    <p className='text-lg'>{item}</p>
+                  </div>
+                </div>
+              );
+            }
           })}
         </div>
       </div>

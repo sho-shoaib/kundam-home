@@ -1,9 +1,12 @@
 import { Container } from "@mui/system";
 import React from "react";
+import useWindowDimensions from "../components/getWindowDimensions";
 import blogBg from "../images/blob_bg.svg";
 import handshake from "../images/handshake.png";
 
 const VisionMission = () => {
+  const { width, height } = useWindowDimensions();
+
   return (
     <>
       <div id='vision-mission' className='relative pt-20 relative '>
@@ -15,18 +18,15 @@ const VisionMission = () => {
 
         <Container style={{ zIndex: "2" }}>
           <div className='flex flex-col gap-10'>
-            <div className='flex items-center gap-10 w-full z-20'>
-              <div className='w-1/2'>
+            <div className='flex flex-col lg:flex-row items-center gap-0 lg:gap-10 w-full z-20'>
+              <div className='w-full md:w-8/12 lg:w-1/2'>
                 <img
                   src={handshake}
                   alt='handshake'
                   className='w-full h-full'
                 />
               </div>
-              <div
-                className='flex flex-col gap-4 w-1/2 rounded-xl p-4'
-                style={{ maxWidth: "500px" }}
-              >
+              <div className='flex flex-col sm:flex-row lg:flex-col gap-4 w-full lg:w-1/2 rounded-xl p-4'>
                 <div className='p-2'>
                   <div className='flex items-center justify-start gap-1 add-before relative'>
                     <h1 className='sm:text-6xl text-4xl font-semibold leading-snug text-shadow mb-5 '>

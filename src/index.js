@@ -7,7 +7,7 @@ import { StyledEngineProvider } from "@mui/styled-engine";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <StyledEngineProvider>
+    <StyledEngineProvider injectFirst>
       <App />
     </StyledEngineProvider>
   </React.StrictMode>

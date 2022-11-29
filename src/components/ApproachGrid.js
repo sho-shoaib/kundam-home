@@ -22,8 +22,11 @@ const ApproachGrid = () => {
         const { icon, name } = item;
         return (
           <div className='flex flex-col items-center gap-2'>
-            <img src={icon} alt={`${name} Icon`} className='w-24' />
-            <p className='font-semibold' style={{ maxWidth: "200px" }}>
+            <img src={icon} alt={`${name} Icon`} className='w-16 md:w-24' />
+            <p
+              className='font-semibold text-sm sm:text-lg'
+              style={{ maxWidth: "200px" }}
+            >
               {name}
             </p>
           </div>

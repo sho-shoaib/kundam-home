@@ -12,25 +12,25 @@ const HomePage = () => {
   return (
     <div
       id='home'
-      className='w-full h-screen flex flex-col justify-center change-margin-home relative'
+      className='w-full h-screen flex flex-col justify-center items-center change-margin-home relative'
     >
       <div
-        className='px-4 flex items-center justify-between relative change-flex-sphere change-padding-home pl-20 z-10 h-full'
+        className='px-4 flex items-center justify-between absolute top-0 right-0 left-0 change-flex-sphere change-padding-home pl-20 z-10 h-full'
         style={{ backgroundColor: "rgba(255,255,255,0.5)" }}
       >
-        <div className='inline-block flex flex-col gap-5 relative'>
+        <div className='flex flex-col items-center lg:items-start gap-5 relative'>
           <h1 className='sm:text-7xl text-5xl font-semibold leading-snug text-shadow change-align-home'>
             KUNDAN VALVES
             <br />
             AND FORGING
           </h1>
           <div
-            className='h-3 w-44'
+            className='h-3 md:w-44 w-32'
             style={{ backgroundColor: "rgba(254,1,0,0.8)" }}
           ></div>
           <div>
             <button
-              className='py-4 px-6 text-xl rounded-lg border-2 border-amber-500 text-black transition duration-300 mt-6'
+              className='py-4 px-6 text-lg md:text-xl rounded-lg border-2 border-amber-500 text-black transition duration-300 mt-6'
               style={{
                 backgroundColor: `${
                   btnHovered
@@ -51,8 +51,8 @@ const HomePage = () => {
         </div> */}
       </div>
 
-      <div className='absolute h-screen w-full overflow-hidden'>
-        <video autoPlay loop muted className='w-full object-cover h-full'>
+      <div className='absolute top-0 h-screen w-full overflow-hidden'>
+        <video autoPlay loop muted className='w-full h-full object-cover'>
           <source src={video} type='video/mp4' />
         </video>
       </div>
