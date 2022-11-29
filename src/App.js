@@ -12,20 +12,24 @@ import Approach from "./pages/Approach";
 const HomeCombined = () => {
   return (
     <>
-      <Container maxWidth='xl' className='p-0'>
+      <div className='w-full p-0'>
         <HomePage />
         <NavbarMain />
         <VisionMission />
         <Approach />
         <CatalogSlider />
-      </Container>
+      </div>
     </>
   );
 };
 
 function App() {
   return (
-    <Container maxWidth='xl' disableGutters style={{ zIndex: "-20" }}>
+    <div
+      disableGutters
+      style={{ zIndex: "-20", maxWidth: "1920px" }}
+      className='flex items-center flex-col'
+    >
       <NavbarHome />
       <BrowserRouter>
         <Routes>
@@ -34,7 +38,7 @@ function App() {
         </Routes>
         <Footer />
       </BrowserRouter>
-    </Container>
+    </div>
   );
 }
 

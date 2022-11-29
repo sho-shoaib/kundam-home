@@ -26,15 +26,14 @@ const NavbarHome = () => {
             backgroundColor: "#FCBF02",
           }}
         >
-          <Container
-            className=' py-4'
+          <div
+            className='w-full py-4 flex justify-between items-center px-4'
             sx={{
               display: "flex",
               alignItems: "center",
               justifyContent: "space-between",
               fontFamily: "Poppins !important",
             }}
-            maxWidth='xl'
           >
             <Link activeClass='active' to='home' spy={true} smooth={true}>
               <div className='w-32 cursor-pointer'>
@@ -97,7 +96,7 @@ const NavbarHome = () => {
                 <img src={DiscordIcon} alt='discordIcon' className='w-5' />
               </a>
             </div>
-          </Container>
+          </div>
         </nav>
       )}{" "}
       {width <= 930 && width > 550 && (
