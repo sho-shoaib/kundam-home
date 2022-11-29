@@ -14,7 +14,7 @@ const Footer = () => {
 
   if (width > 1400) {
     return (
-      <footer id='contact' className='relative -mt-10'>
+      <footer id='contact' className='relative -mt-10 w-full'>
         <div
           className='absolute left-0 bottom-0 -z-10'
           style={{ transform: "scaleX(-1)" }}
@@ -142,7 +142,7 @@ const Footer = () => {
     );
   } else if (width > 1000 && width < 1440) {
     return (
-      <footer className='pt-32 '>
+      <footer className='pt-32 w-full'>
         <div
           className='clipped-footer w-full relative'
           style={{ height: `${width > 1200 ? "400px" : "580px"}` }}
@@ -272,7 +272,7 @@ const Footer = () => {
     );
   } else {
     return (
-      <footer className='pt-32'>
+      <footer className='pt-32 w-full'>
         {" "}
         <div
           className='clipped-footer-phone w-full relative'
