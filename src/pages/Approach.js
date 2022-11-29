@@ -1,19 +1,20 @@
 import React from "react";
 import ApproachGrid from "../components/ApproachGrid";
-import bgApproach from "../images/bg-aproach.png";
-import missionGif from "../images/mission.gif";
-import visionGif from "../images/vision.gif";
+import gliiterGif from "../images/glitter-gif.gif";
 
 const Approach = () => {
   return (
-    <div id='approach' className='pt-28 z-20'>
+    <div id='approach' className='pt-28 z-20 '>
       <div
         style={{
           maxWidth: "800px",
           backgroundColor: "rgba(255,255,255,0.8)",
         }}
-        className='p-10 rounded-xl m-auto text-center hover:shadow-lg shadow-md transition duration-300 flex flex-col gap-7'
+        className='p-10 rounded-xl m-auto text-center hover:shadow-lg shadow-md transition duration-300 flex flex-col gap-7 relative'
       >
+        <div className='w-full h-full absolute top-0 left-0 p-24 opacity-30'>
+          <img src={gliiterGif} alt='more glitter' className='w-full h-full' />
+        </div>
         <h1 className='sm:text-7xl text-5xl font-semibold leading-snug text-shadow'>
           OUR APPROACH
         </h1>

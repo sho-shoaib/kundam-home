@@ -1,8 +1,6 @@
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import { Cobe } from "../components/Cobe";
-// import glitter2 from "../images/glitter_2.png";
 import video from "../images/video/home-vid.mp4";
 
 const HomePage = () => {

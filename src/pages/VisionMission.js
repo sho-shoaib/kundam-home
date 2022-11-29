@@ -3,19 +3,22 @@ import React from "react";
 import useWindowDimensions from "../components/getWindowDimensions";
 import blogBg from "../images/blob_bg.svg";
 import handshake from "../images/handshake.png";
+import glitterHome from "../images/glitter-home.png";
 
 const VisionMission = () => {
   const { width, height } = useWindowDimensions();
 
   return (
     <>
-      <div id='vision-mission' className='relative pt-20 relative '>
+      <div id='vision-mission' className='relative pt-20'>
         <img
           src={blogBg}
           alt='blob_bg'
           className='absolute opacity-40 h-full'
         />
-
+        <div className='w-full absolute top-0 opacity-90'>
+          <img src={glitterHome} alt='home-img' className='w-full' />
+        </div>
         <Container style={{ zIndex: "2" }}>
           <div className='flex flex-col gap-10'>
             <div className='flex flex-col lg:flex-row items-center gap-0 lg:gap-10 w-full z-20'>
