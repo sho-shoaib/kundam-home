@@ -1,16 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import blueElem from "../images/blue-elem.png";
-import { AiFillPhone, AiOutlineMail } from "react-icons/ai";
+import { AiOutlineMail } from "react-icons/ai";
+import { BsFillTelephoneFill } from "react-icons/bs";
 import { BiWorld } from "react-icons/bi";
 import glitter1 from "../images/glitter_1.png";
 import logoKundan from "../images/logo-kundan.png";
 import { Link } from "react-scroll";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import useWindowDimensions from "./getWindowDimensions";
 
 const Footer = () => {
   const navigate = useNavigate();
   const { width, height } = useWindowDimensions();
+  const [changeFooter, setChangeFooter] = useState(false);
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === "/kundam-home/about") {
+      setChangeFooter(true);
+    }
+  }, [location.pathname]);
 
   if (width > 1400) {
     return (
@@ -49,45 +59,72 @@ const Footer = () => {
               </div>
               <div className='flex flex-col gap-1'>
                 <div className='flex gap-6 mb-1'>
-                  <Link activeClass='active' to='home' spy={true} smooth={true}>
-                    <p>Home</p>
-                  </Link>
+                  {changeFooter ? (
+                    <a href='/kundam-home/'>Home</a>
+                  ) : (
+                    <Link
+                      className='cursor-pointer'
+                      activeClass='active'
+                      to='home'
+                      spy={true}
+                      smooth={true}
+                    >
+                      <p>Home</p>
+                    </Link>
+                  )}
+
                   <a
+                    className='cursor-pointer'
                     activeClass='active'
                     onClick={() => navigate("/kundam-home/about")}
                   >
                     <p>About</p>
                   </a>
-
-                  <Link
-                    activeClass='active'
-                    to='vision-mission'
-                    spy={true}
-                    smooth={true}
-                  >
-                    <p>Vision/Mission</p>
-                  </Link>
+                  {changeFooter ? (
+                    <a href='/kundam-home/'>Vision/Mission</a>
+                  ) : (
+                    <Link
+                      className='cursor-pointer'
+                      activeClass='active'
+                      to='vision-mission'
+                      spy={true}
+                      smooth={true}
+                    >
+                      <p>Vision/Mission</p>
+                    </Link>
+                  )}
                 </div>
                 <div className='flex gap-6'>
-                  <Link
-                    activeClass='active'
-                    to='approach'
-                    spy={true}
-                    smooth={true}
-                  >
-                    <p>Approach</p>
-                  </Link>
+                  {changeFooter ? (
+                    <a href='/kundam-home/'>Approach</a>
+                  ) : (
+                    <Link
+                      className='cursor-pointer'
+                      activeClass='active'
+                      to='approach'
+                      spy={true}
+                      smooth={true}
+                    >
+                      <p>Approach</p>
+                    </Link>
+                  )}
+
+                  {changeFooter ? (
+                    <a href='/kundam-home/'>Catalog</a>
+                  ) : (
+                    <Link
+                      className='cursor-pointer'
+                      activeClass='active'
+                      to='catalog'
+                      spy={true}
+                      smooth={true}
+                    >
+                      <p>Catalog</p>
+                    </Link>
+                  )}
 
                   <Link
-                    activeClass='active'
-                    to='catalog'
-                    spy={true}
-                    smooth={true}
-                  >
-                    <p>Catalog</p>
-                  </Link>
-
-                  <Link
+                    className='cursor-pointer'
                     activeClass='active'
                     to='contact'
                     spy={true}
@@ -104,7 +141,7 @@ const Footer = () => {
                   className='border-r-2 p-0 pr-3'
                   style={{ borderColor: "#FCBF02" }}
                 >
-                  <AiFillPhone sx={{ color: "#FCBF02" }} />
+                  <BsFillTelephoneFill sx={{ color: "#FCBF02" }} />
                 </span>
                 <p>+91 90290 90100</p>
               </div>
@@ -142,7 +179,7 @@ const Footer = () => {
     );
   } else if (width > 1000 && width < 1440) {
     return (
-      <footer className='pt-32 w-full'>
+      <footer id='contact' className='pt-32 w-full'>
         <div
           className='clipped-footer w-full relative'
           style={{ height: `${width > 1200 ? "400px" : "580px"}` }}
@@ -232,7 +269,7 @@ const Footer = () => {
                       className='border-r-2 p-0 pr-3'
                       style={{ borderColor: "#FCBF02" }}
                     >
-                      <AiFillPhone sx={{ color: "#FCBF02" }} />
+                      <BsFillTelephoneFill sx={{ color: "#FCBF02" }} />
                     </span>
                     <p>+91 90290 90100</p>
                   </div>
@@ -272,7 +309,7 @@ const Footer = () => {
     );
   } else {
     return (
-      <footer className='pt-32 w-full'>
+      <footer id='contact' className='pt-32 w-full'>
         {" "}
         <div
           className='clipped-footer-phone w-full relative'
@@ -372,7 +409,7 @@ const Footer = () => {
                         className='border-r-2 p-0 pr-3'
                         style={{ borderColor: "#FCBF02" }}
                       >
-                        <AiFillPhone sx={{ color: "#FCBF02" }} />
+                        <BsFillTelephoneFill sx={{ color: "#FCBF02" }} />
                       </span>
                       <p>+91 90290 90100</p>
                     </div>

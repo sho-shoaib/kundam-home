@@ -57,6 +57,9 @@ canvas{
   .change-align-home {
     text-align: center;
   }
+  .change-align-home div {
+    margin-inline: auto;
+  }
   .change-padding-home {
     padding-left: 0px;
     padding-top: 150px;

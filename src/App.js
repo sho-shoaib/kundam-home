@@ -8,8 +8,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AboutPage from "./pages/AboutPage";
 import NavbarMain from "./components/NavbarMain";
 import Approach from "./pages/Approach";
+import { useEffect } from "react";
 
 const HomeCombined = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <div className='w-full p-0'>
@@ -30,8 +35,8 @@ function App() {
       style={{ zIndex: "-20", maxWidth: "1920px" }}
       className='flex items-center flex-col'
     >
-      <NavbarHome />
       <BrowserRouter>
+        <NavbarHome />
         <Routes>
           <Route path='/kundam-home/' element={<HomeCombined />} />
           <Route path='/kundam-home/about' element={<AboutPage />} />

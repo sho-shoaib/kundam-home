@@ -17,6 +17,10 @@ const Approach = () => {
         </div>
         <h1 className='sm:text-7xl text-5xl font-semibold leading-snug text-shadow'>
           OUR APPROACH
+          <div
+            className='w-44 h-2 m-auto mt-4'
+            style={{ backgroundColor: "rgba(254,1,0,0.8)" }}
+          ></div>
         </h1>
         <p className='text-xl para font-semibold'>
           “KUNDAN wants to become the most successful and respected fastener

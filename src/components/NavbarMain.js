@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Container } from "@mui/system";
 import { GrTwitter } from "react-icons/gr";
-import { AiOutlineInstagram } from "react-icons/ai";
+import { AiOutlineInstagram, AiFillLinkedin } from "react-icons/ai";
 import { AiOutlineMenu } from "react-icons/ai";
 import useWindowDimensions from "./getWindowDimensions";
 import { Link } from "react-scroll";
@@ -10,6 +10,17 @@ import { useState } from "react";
 import DiscordIcon from "../images/discordIcon.png";
 import logo from "../images/logo-kundan.png";
 import { useNavigate } from "react-router-dom";
+
+const socials = [
+  {
+    icon: <AiOutlineInstagram style={{ fontSize: "30px" }} />,
+    link: "https://www.instagram.com/",
+  },
+  {
+    icon: <AiFillLinkedin style={{ fontSize: "30px" }} />,
+    link: "https://www.linkedin.com/",
+  },
+];
 
 const NavbarHome = () => {
   const { width } = useWindowDimensions();
@@ -41,10 +52,17 @@ const NavbarHome = () => {
               </div>
             </Link>
             <Box className='flex gap-10 child:text-md child:font-medium child:cursor-pointer child-hover:opacity-80 child:transition child:ease-in'>
-              <Link activeClass='active' to='home' spy={true} smooth={true}>
+              <Link
+                className='cursor-pointer hover:underline underline-offset-2'
+                activeClass='active'
+                to='home'
+                spy={true}
+                smooth={true}
+              >
                 <p>Home</p>
               </Link>
               <a
+                className='cursor-pointer hover:underline underline-offset-2'
                 activeClass='active'
                 onClick={() => navigate("/kundam-home/about")}
               >
@@ -52,6 +70,7 @@ const NavbarHome = () => {
               </a>
 
               <Link
+                className='cursor-pointer hover:underline underline-offset-2'
                 activeClass='active'
                 to='vision-mission'
                 spy={true}
@@ -60,41 +79,44 @@ const NavbarHome = () => {
                 <p>Vision/Mission</p>
               </Link>
 
-              <Link activeClass='active' to='approach' spy={true} smooth={true}>
+              <Link
+                className='cursor-pointer hover:underline underline-offset-2'
+                activeClass='active'
+                to='approach'
+                spy={true}
+                smooth={true}
+              >
                 <p>Approach</p>
               </Link>
 
-              <Link activeClass='active' to='catalog' spy={true} smooth={true}>
+              <Link
+                className='cursor-pointer hover:underline underline-offset-2'
+                activeClass='active'
+                to='catalog'
+                spy={true}
+                smooth={true}
+              >
                 <p>Catalog</p>
               </Link>
 
-              <Link activeClass='active' to='contact' spy={true} smooth={true}>
+              <Link
+                className='cursor-pointer hover:underline underline-offset-2'
+                activeClass='active'
+                to='contact'
+                spy={true}
+                smooth={true}
+              >
                 <p>Contact</p>
               </Link>
             </Box>
             <div className='flex gap-6 child-hover:opacity-80 child:transition child:ease-in child:cursor-pointer'>
-              <a
-                href='https://www.instagram.com/nautzz/'
-                target='_blank'
-                rel='noreferrer'
-              >
-                <AiOutlineInstagram style={{ fontSize: "20px" }} />
-              </a>
-              <a
-                href='https://twitter.com/nautz_'
-                target='_blank'
-                rel='noreferrer'
-              >
-                <GrTwitter style={{ fontSize: "20px" }} />
-              </a>
-
-              <a
-                href='https://discord.gg/nautz'
-                target='_blank'
-                rel='noreferrer'
-              >
-                <img src={DiscordIcon} alt='discordIcon' className='w-5' />
-              </a>
+              {socials.map((item) => {
+                return (
+                  <a href={item.link} target='_blank' rel='noreferrer'>
+                    {item.icon}
+                  </a>
+                );
+              })}
             </div>
           </div>
         </nav>
@@ -114,29 +136,13 @@ const NavbarHome = () => {
                 </div>
               </Link>
               <div className='flex gap-6 child-hover:opacity-80 child:transition child:ease-in child:cursor-pointer'>
-                <a
-                  href='https://twitter.com/nautz_'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  <GrTwitter style={{ fontSize: "29px" }} />
-                </a>
-
-                <a
-                  href='https://www.instagram.com/nautzz/'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  <AiOutlineInstagram style={{ fontSize: "29px" }} />
-                </a>
-
-                <a
-                  href='https://discord.gg/nautz'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  <img src={DiscordIcon} alt='discordIcon' className='w-8' />
-                </a>
+                {socials.map((item) => {
+                  return (
+                    <a href={item.link} target='_blank' rel='noreferrer'>
+                      {item.icon}
+                    </a>
+                  );
+                })}
               </div>
             </Container>
           </nav>
@@ -147,31 +153,61 @@ const NavbarHome = () => {
                 backgroundColor: "#FCBF02",
               }}
             >
-              <Link activeClass='active' to='home' spy={true} smooth={true}>
-                <p>Home</p>
-              </Link>
-              <Link activeClass='active' to='about' spy={true} smooth={true}>
-                <p>About</p>
-              </Link>
-              <Link activeClass='active' to='roadmap' spy={true} smooth={true}>
-                <p>Roadmap</p>
-              </Link>
-
-              <Link activeClass='active' to='team' spy={true} smooth={true}>
-                <p>Team</p>
-              </Link>
-
               <Link
+                className='cursor-pointer hover:underline underline-offset-2'
                 activeClass='active'
-                to='utilities'
+                to='home'
                 spy={true}
                 smooth={true}
               >
-                <p>Utilities</p>
+                <p>Home</p>
+              </Link>
+              <a
+                className='cursor-pointer hover:underline underline-offset-2'
+                activeClass='active'
+                onClick={() => navigate("/kundam-home/about")}
+              >
+                <p>About</p>
+              </a>
+
+              <Link
+                className='cursor-pointer hover:underline underline-offset-2'
+                activeClass='active'
+                to='vision-mission'
+                spy={true}
+                smooth={true}
+              >
+                <p>Vision/Mission</p>
               </Link>
 
-              <Link activeClass='active' to='faq' spy={true} smooth={true}>
-                <p>FAQ</p>
+              <Link
+                className='cursor-pointer hover:underline underline-offset-2'
+                activeClass='active'
+                to='approach'
+                spy={true}
+                smooth={true}
+              >
+                <p>Approach</p>
+              </Link>
+
+              <Link
+                className='cursor-pointer hover:underline underline-offset-2'
+                activeClass='active'
+                to='catalog'
+                spy={true}
+                smooth={true}
+              >
+                <p>Catalog</p>
+              </Link>
+
+              <Link
+                className='cursor-pointer hover:underline underline-offset-2'
+                activeClass='active'
+                to='contact'
+                spy={true}
+                smooth={true}
+              >
+                <p>Contact</p>
               </Link>
             </Box>
           </nav>
@@ -192,29 +228,13 @@ const NavbarHome = () => {
                 </div>
               </Link>
               <div className='flex gap-6 child-hover:opacity-80 child:transition child:ease-in child:cursor-pointer'>
-                <a
-                  href='https://twitter.com/nautz_'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  <GrTwitter style={{ fontSize: "29px" }} />
-                </a>
-
-                <a
-                  href='https://www.instagram.com/nautzz/'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  <AiOutlineInstagram style={{ fontSize: "29px" }} />
-                </a>
-
-                <a
-                  href='https://discord.gg/nautz'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  <img src={DiscordIcon} alt='discordIcon' className='w-8' />
-                </a>
+                {socials.map((item) => {
+                  return (
+                    <a href={item.link} target='_blank' rel='noreferrer'>
+                      {item.icon}
+                    </a>
+                  );
+                })}
                 {isOpen ? (
                   <GrClose style={{ fontSize: "29px" }} onClick={toggle} />
                 ) : (
@@ -236,48 +256,69 @@ const NavbarHome = () => {
                   backgroundColor: "#FCBF02",
                 }}
               >
-                <Link activeClass='active' to='home' spy={true} smooth={true}>
-                  <p className='text-lg' onClick={toggle}>
-                    Home
-                  </p>
-                </Link>
-                <Link activeClass='active' to='about' spy={true} smooth={true}>
-                  <p className='text-lg' onClick={toggle}>
-                    About
-                  </p>
-                </Link>
                 <Link
+                  className='cursor-pointer hover:underline underline-offset-2'
                   activeClass='active'
-                  to='roadmap'
+                  to='home'
                   spy={true}
                   smooth={true}
+                  onClick={toggle}
                 >
-                  <p className='text-lg' onClick={toggle}>
-                    Roadmap
-                  </p>
+                  <p>Home</p>
                 </Link>
+                <a
+                  className='cursor-pointer hover:underline underline-offset-2'
+                  activeClass='active'
+                  onClick={() => {
+                    toggle();
+                    navigate("/kundam-home/about");
+                  }}
+                >
+                  <p>About</p>
+                </a>
 
-                <Link activeClass='active' to='team' spy={true} smooth={true}>
-                  <p className='text-lg' onClick={toggle}>
-                    Team
-                  </p>
+                <Link
+                  className='cursor-pointer hover:underline underline-offset-2'
+                  activeClass='active'
+                  to='vision-mission'
+                  spy={true}
+                  smooth={true}
+                  onClick={toggle}
+                >
+                  <p>Vision/Mission</p>
                 </Link>
 
                 <Link
+                  className='cursor-pointer hover:underline underline-offset-2'
                   activeClass='active'
-                  to='utilities'
+                  to='approach'
                   spy={true}
                   smooth={true}
+                  onClick={toggle}
                 >
-                  <p className='text-lg' onClick={toggle}>
-                    Utilities
-                  </p>
+                  <p>Approach</p>
                 </Link>
 
-                <Link activeClass='active' to='faq' spy={true} smooth={true}>
-                  <p className='text-lg' onClick={toggle}>
-                    FAQ
-                  </p>
+                <Link
+                  className='cursor-pointer hover:underline underline-offset-2'
+                  activeClass='active'
+                  to='catalog'
+                  spy={true}
+                  smooth={true}
+                  onClick={toggle}
+                >
+                  <p>Catalog</p>
+                </Link>
+
+                <Link
+                  className='cursor-pointer hover:underline underline-offset-2'
+                  activeClass='active'
+                  to='contact'
+                  spy={true}
+                  smooth={true}
+                  onClick={toggle}
+                >
+                  <p>Contact</p>
                 </Link>
               </Box>
             </div>

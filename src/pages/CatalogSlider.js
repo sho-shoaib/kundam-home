@@ -5,38 +5,25 @@ import { Container } from "@mui/system";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import catalogHolder from "../images/catalog-placeholder.jpg";
+import catalog1 from "../images/catalog/1.jpg";
+import catalog2 from "../images/catalog/2.jpg";
+import catalog3 from "../images/catalog/3.jpg";
 import useWindowDimensions from "../components/getWindowDimensions";
 
 const data = [
   {
-    img: catalogHolder,
-    title: "Title 1",
+    img: catalog1,
+    title: "Fasteners",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione laudantium quibusdam quod saepe nemo accusamus odit ad ex! Magnam laborum ut rem commodi obcaecati",
   },
   {
-    img: catalogHolder,
-    title: "Title 1",
+    img: catalog2,
+    title: "Drivers",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione laudantium quibusdam quod saepe nemo accusamus odit ad ex! Magnam laborum ut rem commodi obcaecati",
   },
   {
-    img: catalogHolder,
-    title: "Title 1",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione laudantium quibusdam quod saepe nemo accusamus odit ad ex! Magnam laborum ut rem commodi obcaecati",
-  },
-  {
-    img: catalogHolder,
-    title: "Title 1",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione laudantium quibusdam quod saepe nemo accusamus odit ad ex! Magnam laborum ut rem commodi obcaecati",
-  },
-  {
-    img: catalogHolder,
-    title: "Title 1",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione laudantium quibusdam quod saepe nemo accusamus odit ad ex! Magnam laborum ut rem commodi obcaecati",
-  },
-  {
-    img: catalogHolder,
-    title: "Title 1",
+    img: catalog3,
+    title: "Company Profile",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione laudantium quibusdam quod saepe nemo accusamus odit ad ex! Magnam laborum ut rem commodi obcaecati",
   },
 ];
@@ -48,6 +35,10 @@ const CatalogSlider = () => {
     <Container className='pt-28' id='catalog'>
       <h1 className='sm:text-7xl text-5xl font-semibold leading-snug text-shadow mb-12 text-center'>
         OUR CATALOG
+        <div
+          className='w-44 h-2 m-auto mt-4'
+          style={{ backgroundColor: "rgba(254,1,0,0.8)" }}
+        ></div>
       </h1>
       <Swiper
         modules={[Navigation, Pagination, A11y]}
