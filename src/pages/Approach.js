@@ -12,7 +12,7 @@ const Approach = () => {
         }}
         className='p-10 rounded-xl m-auto text-center hover:shadow-lg shadow-md transition duration-300 flex flex-col gap-7 relative'
       >
-        <div className='w-full h-full absolute top-0 left-0 p-24 opacity-30'>
+        <div className='w-full h-full absolute top-0 left-0 p-24 -z-10'>
           <img src={gliiterGif} alt='more glitter' className='w-full h-full' />
         </div>
         <h1 className='sm:text-7xl text-5xl font-semibold leading-snug text-shadow'>
