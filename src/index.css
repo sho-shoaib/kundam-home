@@ -47,6 +47,10 @@ canvas{
   position: relative;
 }
 
+.change-align-home {
+  text-align: center;
+}
+
 @media (max-width: 1200px) {
   .change-flex-sphere {
     flex-direction: column;
