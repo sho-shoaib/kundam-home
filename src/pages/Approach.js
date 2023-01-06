@@ -1,20 +1,19 @@
 import React from "react";
 import ApproachGrid from "../components/ApproachGrid";
-import gliiterGif from "../images/glitter-gif.gif";
+import approachSparkle from "../images/approach-sparkle.png";
 
 const Approach = () => {
   return (
     <div id='approach' className='pt-28 z-20 '>
-      <div
-        style={{
-          maxWidth: "1000px",
-        }}
-        className='p-10 rounded-xl m-auto text-center transition duration-300 flex flex-col gap-7 relative'
-      >
-        <div className='w-full h-full absolute top-0 left-0 p-24 -z-10 opacity-20'>
-          <img src={gliiterGif} alt='more glitter' className='w-full h-full' />
+      <div className='p-10 rounded-xl m-auto text-center transition duration-300 flex flex-col gap-7 relative'>
+        <div className='w-full h-full absolute top-0 left-0 p-24 -z-10 opacity-40'>
+          <img
+            src={approachSparkle}
+            alt='more glitter'
+            className='w-full h-full object-cover'
+          />
         </div>
-        <h1 className='sm:text-7xl text-5xl font-semibold leading-snug text-shadow'>
+        <h1 className='sm:text-7xl text-5xl font-semibold leading-snug text-shadow title'>
           OUR APPROACH
           <div
             className='w-44 h-2 m-auto mt-4'

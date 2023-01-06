@@ -15,6 +15,10 @@ body {
   background-attachment: fixed;
 }
 
+.title {
+  color: #001FC7
+}
+
 .space-bg {
   width: 100vw;
   height: 100vh;
@@ -29,6 +33,10 @@ code {
 
 .text-shadow {
   text-shadow: 2px 2px 0px #FCBF02;
+}
+
+.text-shadow-home {
+  text-shadow: 2px 2px 0px #CC0000 ;
 }
 
 canvas{

@@ -17,7 +17,7 @@ const approachArr = [
 
 const ApproachGrid = () => {
   return (
-    <div className='w-full grid grid-cols-3 gap-y-4'>
+    <div className='w-full grid grid-cols-6 gap-4'>
       {approachArr.map((item, i) => {
         const { icon, name } = item;
         return (

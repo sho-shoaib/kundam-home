@@ -4,7 +4,7 @@ import { AiOutlineMail } from "react-icons/ai";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { BiWorld } from "react-icons/bi";
 import glitter1 from "../images/glitter_1.png";
-import logoKundan from "../images/logo-kundan.png";
+import logoKundan from "../images/kundan-logo-white.png";
 import { Link } from "react-scroll";
 import { useLocation, useNavigate } from "react-router-dom";
 import useWindowDimensions from "./getWindowDimensions";
@@ -17,7 +17,7 @@ const Footer = () => {
   const location = useLocation();
 
   useEffect(() => {
-    if (location.pathname === "/kundam-home/about") {
+    if (location.pathname === "/about") {
       setChangeFooter(true);
     }
   }, [location.pathname]);
@@ -45,7 +45,7 @@ const Footer = () => {
             <div className='w-full -ml-6'>
               <img className='w-full h-full' src={logoKundan} alt='logo' />
             </div>
-            <div className='px-1 mt-2'>
+            <div className='px-1 mt-4'>
               <p className='w-full text-justify text-white'>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque
                 minima veniam quo commodi
@@ -60,7 +60,7 @@ const Footer = () => {
               <div className='flex flex-col gap-1'>
                 <div className='flex gap-6 mb-1'>
                   {changeFooter ? (
-                    <a href='/kundam-home/'>Home</a>
+                    <a href='/'>Home</a>
                   ) : (
                     <Link
                       className='cursor-pointer'
@@ -76,12 +76,12 @@ const Footer = () => {
                   <a
                     className='cursor-pointer'
                     activeClass='active'
-                    onClick={() => navigate("/kundam-home/about")}
+                    onClick={() => navigate("/about")}
                   >
                     <p>About</p>
                   </a>
                   {changeFooter ? (
-                    <a href='/kundam-home/'>Vision/Mission</a>
+                    <a href='/'>Vision/Mission</a>
                   ) : (
                     <Link
                       className='cursor-pointer'
@@ -96,7 +96,7 @@ const Footer = () => {
                 </div>
                 <div className='flex gap-6'>
                   {changeFooter ? (
-                    <a href='/kundam-home/'>Approach</a>
+                    <a href='/'>Approach</a>
                   ) : (
                     <Link
                       className='cursor-pointer'
@@ -110,16 +110,16 @@ const Footer = () => {
                   )}
 
                   {changeFooter ? (
-                    <a href='/kundam-home/'>Catalog</a>
+                    <a href='/'>catalogs</a>
                   ) : (
                     <Link
                       className='cursor-pointer'
                       activeClass='active'
-                      to='catalog'
+                      to='catalogs'
                       spy={true}
                       smooth={true}
                     >
-                      <p>Catalog</p>
+                      <p>catalogss</p>
                     </Link>
                   )}
 
@@ -196,7 +196,7 @@ const Footer = () => {
               <div className='w-full -ml-6'>
                 <img className='w-full h-full' src={logoKundan} alt='logo' />
               </div>
-              <div className='px-1 mt-2'>
+              <div className='px-1 mt-4'>
                 <p className='w-full text-justify text-white'>
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                   Neque minima veniam quo commodi
@@ -218,10 +218,7 @@ const Footer = () => {
                     >
                       <p>Home</p>
                     </Link>
-                    <a
-                      activeClass='active'
-                      onClick={() => navigate("/kundam-home/about")}
-                    >
+                    <a activeClass='active' onClick={() => navigate("/about")}>
                       <p>About</p>
                     </a>
 
@@ -246,11 +243,11 @@ const Footer = () => {
 
                     <Link
                       activeClass='active'
-                      to='catalog'
+                      to='catalogs'
                       spy={true}
                       smooth={true}
                     >
-                      <p>Catalog</p>
+                      <p>catalogs</p>
                     </Link>
 
                     <Link
@@ -336,7 +333,7 @@ const Footer = () => {
                 <div className='w-full -ml-6'>
                   <img className='w-full h-full' src={logoKundan} alt='logo' />
                 </div>
-                <div className='px-1 mt-2'>
+                <div className='px-1 mt-4'>
                   <p className='w-full text-justify text-white'>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     Neque minima veniam quo commodi
@@ -360,7 +357,7 @@ const Footer = () => {
                       </Link>
                       <a
                         activeClass='active'
-                        onClick={() => navigate("/kundam-home/about")}
+                        onClick={() => navigate("/about")}
                       >
                         <p>About</p>
                       </a>
@@ -386,11 +383,11 @@ const Footer = () => {
 
                       <Link
                         activeClass='active'
-                        to='catalog'
+                        to='catalogs'
                         spy={true}
                         smooth={true}
                       >
-                        <p>Catalog</p>
+                        <p>catalogs</p>
                       </Link>
 
                       <Link

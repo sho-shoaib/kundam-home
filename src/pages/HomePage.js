@@ -14,10 +14,10 @@ const HomePage = () => {
     >
       <div
         className='px-4 flex items-center justify-between absolute top-0 right-0 left-0 change-flex-sphere change-padding-home pl-20 z-10 h-full'
-        style={{ backgroundColor: "rgba(255,255,255,0.5)" }}
+        style={{ backgroundColor: "rgba(255,255,255,0.2)" }}
       >
         <div className='flex flex-col items-center gap-5 relative mx-auto mt-16'>
-          <h1 className='sm:text-8xl text-5xl font-semibold leading-snug text-shadow change-align-home'>
+          <h1 className='sm:text-8xl text-5xl font-semibold leading-snug text-shadow-home change-align-home title'>
             KUNDAN VALVES
             <br />
             AND FORGING
@@ -38,24 +38,9 @@ const HomePage = () => {
               }}
               onMouseOver={() => setBtnHovered(true)}
               onMouseOut={() => setBtnHovered(false)}
-              onClick={() => navigate("/kundam-home/about")}
+              onClick={() => navigate("/about")}
             >
               About us
-            </button>
-            <button
-              className='py-4 px-6 text-lg md:text-xl rounded-lg border-2 border-amber-500  transition duration-300 mt-6 ml-8 text-neutral-200'
-              style={{
-                backgroundColor: `${
-                  btnHovered
-                    ? "rgba(245, 158, 11, 0.2)"
-                    : "rgba(245, 158, 11, 0.1)"
-                }`,
-              }}
-              onMouseOver={() => setBtnHovered(true)}
-              onMouseOut={() => setBtnHovered(false)}
-              onClick={() => navigate("/kundam-home/about")}
-            >
-              Contact
             </button>
           </div>
         </div>
@@ -72,5 +57,23 @@ const HomePage = () => {
     </div>
   );
 };
+
+{
+  /* <button
+              className='py-4 px-6 text-lg md:text-xl rounded-lg border-2 border-amber-500  transition duration-300 mt-6 ml-8 text-neutral-200'
+              style={{
+                backgroundColor: `${
+                  btnHovered
+                    ? "rgba(245, 158, 11, 0.2)"
+                    : "rgba(245, 158, 11, 0.1)"
+                }`,
+              }}
+              onMouseOver={() => setBtnHovered(true)}
+              onMouseOut={() => setBtnHovered(false)}
+              onClick={() => navigate("/about")}
+            >
+              Contact
+            </button> */
+}
 
 export default HomePage;

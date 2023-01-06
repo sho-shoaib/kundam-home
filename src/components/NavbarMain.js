@@ -1,7 +1,12 @@
 import React from "react";
 import { Box, Container } from "@mui/system";
 import { GrTwitter } from "react-icons/gr";
-import { AiOutlineInstagram, AiFillLinkedin } from "react-icons/ai";
+import {
+  AiOutlineInstagram,
+  AiFillLinkedin,
+  AiOutlineTwitter,
+  AiFillFacebook,
+} from "react-icons/ai";
 import { AiOutlineMenu } from "react-icons/ai";
 import useWindowDimensions from "./getWindowDimensions";
 import { Link } from "react-scroll";
@@ -15,6 +20,14 @@ const socials = [
   {
     icon: <AiOutlineInstagram style={{ fontSize: "30px" }} />,
     link: "https://www.instagram.com/",
+  },
+  {
+    icon: <AiOutlineTwitter style={{ fontSize: "30px" }} />,
+    link: "https://www.twitter.com/",
+  },
+  {
+    icon: <AiFillFacebook style={{ fontSize: "30px" }} />,
+    link: "https://www.facebook.com/",
   },
   {
     icon: <AiFillLinkedin style={{ fontSize: "30px" }} />,
@@ -64,7 +77,7 @@ const NavbarHome = () => {
               <a
                 className='cursor-pointer hover:underline underline-offset-2'
                 activeClass='active'
-                onClick={() => navigate("/kundam-home/about")}
+                onClick={() => navigate("/about")}
               >
                 <p>About</p>
               </a>
@@ -92,11 +105,11 @@ const NavbarHome = () => {
               <Link
                 className='cursor-pointer hover:underline underline-offset-2'
                 activeClass='active'
-                to='catalog'
+                to='catalogs'
                 spy={true}
                 smooth={true}
               >
-                <p>Catalog</p>
+                <p>Catalogs</p>
               </Link>
 
               <Link
@@ -165,7 +178,7 @@ const NavbarHome = () => {
               <a
                 className='cursor-pointer hover:underline underline-offset-2'
                 activeClass='active'
-                onClick={() => navigate("/kundam-home/about")}
+                onClick={() => navigate("/about")}
               >
                 <p>About</p>
               </a>
@@ -193,11 +206,11 @@ const NavbarHome = () => {
               <Link
                 className='cursor-pointer hover:underline underline-offset-2'
                 activeClass='active'
-                to='catalog'
+                to='catalogs'
                 spy={true}
                 smooth={true}
               >
-                <p>Catalog</p>
+                <p>Catalogs</p>
               </Link>
 
               <Link
@@ -271,7 +284,7 @@ const NavbarHome = () => {
                   activeClass='active'
                   onClick={() => {
                     toggle();
-                    navigate("/kundam-home/about");
+                    navigate("/about");
                   }}
                 >
                   <p>About</p>
@@ -302,12 +315,12 @@ const NavbarHome = () => {
                 <Link
                   className='cursor-pointer hover:underline underline-offset-2'
                   activeClass='active'
-                  to='catalog'
+                  to='catalogs'
                   spy={true}
                   smooth={true}
                   onClick={toggle}
                 >
-                  <p>Catalog</p>
+                  <p>Catalogs</p>
                 </Link>
 
                 <Link

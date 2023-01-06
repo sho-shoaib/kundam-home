@@ -11,11 +11,6 @@ const VisionMission = () => {
   return (
     <>
       <div id='vision-mission' className='relative pt-20'>
-        <img
-          src={blogBg}
-          alt='blob_bg'
-          className='absolute opacity-40 h-full'
-        />
         <div className='w-full absolute top-0 opacity-90'>
           <img src={glitterHome} alt='home-img' className='w-full' />
         </div>
@@ -32,7 +27,7 @@ const VisionMission = () => {
               <div className='flex flex-col sm:flex-row lg:flex-col gap-4 w-full lg:w-1/2 rounded-xl p-4'>
                 <div className='p-2'>
                   <div className='flex items-center justify-start gap-1 add-before relative'>
-                    <h1 className='sm:text-6xl text-4xl font-semibold leading-snug text-shadow mb-5 '>
+                    <h1 className='sm:text-6xl text-4xl font-semibold leading-snug text-shadow mb-5 title'>
                       VISION
                     </h1>
                   </div>
@@ -45,7 +40,7 @@ const VisionMission = () => {
                 </div>
                 <div className='p-2'>
                   <div className='flex items-center justify-start gap-1 add-before relative'>
-                    <h1 className='sm:text-6xl text-4xl font-semibold leading-snug text-shadow mb-5 '>
+                    <h1 className='sm:text-6xl text-4xl font-semibold leading-snug text-shadow mb-5 title'>
                       MISSION
                     </h1>
                   </div>

@@ -17,7 +17,7 @@ const NavbarHome = () => {
         ></div>
         <div
           className='absolute right-28 top-6 w-60 h-24 cursor-pointer'
-          onClick={() => navigate("/kundam-home/")}
+          onClick={() => navigate("/")}
         ></div>
       </nav>
     </div>

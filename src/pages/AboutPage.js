@@ -29,13 +29,13 @@ const AboutPage = () => {
     <Container sx={{ paddingTop: "220px" }}>
       <div className='flex flex-col gap-12'>
         <button
-          onClick={() => navigate("/kundam-home/")}
+          onClick={() => navigate(-1)}
           className='flex items-center justify-center self-start gap-3 text-xl cursor-pointer border-b-2 border-transparent hover:border-red-500 transition duration-300'
           style={{ zIndex: "100" }}
         >
           <IoArrowBack /> Back
         </button>
-        <h1 className='sm:text-7xl text-6xl font-semibold leading-snug text-shadow change-align-home'>
+        <h1 className='sm:text-7xl text-6xl font-semibold leading-snug text-shadow change-align-home flex flex-col items-center'>
           ABOUT US
           <div
             className='w-44 h-2 mt-4'
