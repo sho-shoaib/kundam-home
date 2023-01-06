@@ -26,7 +26,7 @@ const HomePage = () => {
             className='h-3 md:w-44 w-32'
             style={{ backgroundColor: "rgba(254,1,0,0.8)" }}
           ></div>
-          <div className='mt-2'>
+          {/* <div className='mt-2'>
             <button
               className='py-4 px-6 text-lg md:text-xl rounded-lg border-2 border-amber-500  transition duration-300 mt-6 text-neutral-200'
               style={{
@@ -42,7 +42,7 @@ const HomePage = () => {
             >
               About us
             </button>
-          </div>
+          </div> */}
         </div>
         {/* <div className='translate-y-24'>
           <Cobe />
