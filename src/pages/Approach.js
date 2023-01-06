@@ -7,10 +7,9 @@ const Approach = () => {
     <div id='approach' className='pt-28 z-20 '>
       <div
         style={{
-          maxWidth: "800px",
-          backgroundColor: "rgba(255,255,255,0.8)",
+          maxWidth: "1000px",
         }}
-        className='p-10 rounded-xl m-auto text-center hover:shadow-lg shadow-md transition duration-300 flex flex-col gap-7 relative'
+        className='p-10 rounded-xl m-auto text-center transition duration-300 flex flex-col gap-7 relative'
       >
         <div className='w-full h-full absolute top-0 left-0 p-24 -z-10'>
           <img src={gliiterGif} alt='more glitter' className='w-full h-full' />
