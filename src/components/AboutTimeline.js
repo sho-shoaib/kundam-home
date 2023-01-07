@@ -66,7 +66,7 @@ const AboutTimeline = () => {
                   />
                 </div>
                 <span className='sm:text-4xl text-2xl'>{date}</span>
-                <div
+                {/* <div
                   className='w-10 h-full overflow-hidden'
                   style={{ borderColor: "#FCBF02" }}
                 >
@@ -76,7 +76,11 @@ const AboutTimeline = () => {
                     className='w-full h-full object-fill'
                     style={{ transform: "scale(6)" }}
                   />
-                </div>
+                </div> */}
+                <div
+                  className='w-0 h-full border-r-4 border-dashed'
+                  style={{ borderColor: "#FCBF02" }}
+                ></div>
               </div>
               <div className='sm:col-span-6 col-span-8 h-full flex flex-col items-start p-4'>
                 <div
@@ -108,7 +112,7 @@ const AboutTimeline = () => {
                   />
                 </div>
                 <span className='text-4xl'>{date}</span>
-                <div
+                {/* <div
                   className='w-10 h-full overflow-hidden'
                   style={{ borderColor: "#FCBF02" }}
                 >
@@ -118,7 +122,11 @@ const AboutTimeline = () => {
                     className='w-full h-full object-fill'
                     style={{ transform: "scale(6)" }}
                   />
-                </div>
+                </div> */}
+                <div
+                  className='w-0 h-full border-r-4 border-dashed'
+                  style={{ borderColor: "#FCBF02" }}
+                ></div>
               </div>
               <div className=' col-span-5 h-full flex flex-col p-4'>
                 <div
@@ -156,7 +164,7 @@ const AboutTimeline = () => {
                   />
                 </div>
                 <span className='text-4xl'>{date}</span>
-                <div
+                {/* <div
                   className='w-10 h-full overflow-hidden'
                   style={{ borderColor: "#FCBF02" }}
                 >
@@ -164,9 +172,13 @@ const AboutTimeline = () => {
                     src={goldenLine}
                     alt='line'
                     className='w-full h-full object-fill'
-                    style={{ transform: item.big ? "scale(5)" : "scale(6)" }}
+                    style={{ transform: "scale(6)" }}
                   />
-                </div>
+                </div> */}
+                <div
+                  className='w-0 h-full border-r-4 border-dashed'
+                  style={{ borderColor: "#FCBF02" }}
+                ></div>
               </div>
               <div className=' col-span-5 h-full p-4'></div>
             </div>
