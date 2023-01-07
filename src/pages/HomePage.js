@@ -13,11 +13,11 @@ const HomePage = () => {
       className='w-full h-screen flex flex-col justify-center items-center change-margin-home relative'
     >
       <div
-        className='px-4 flex items-center justify-between absolute top-0 right-0 left-0 change-flex-sphere change-padding-home pl-20 z-10 h-full'
+        className='px-4 flex items-center absolute lg:top-0 md:top-12 top-16 right-0 left-0 change-flex-sphere change-padding-home pl-20 z-10 h-full'
         style={{ backgroundColor: "rgba(255,255,255,0.2)" }}
       >
-        <div className='flex flex-col items-center gap-5 relative mx-auto mt-16'>
-          <h1 className='sm:text-8xl text-5xl font-semibold leading-snug text-shadow-home change-align-home title'>
+        <div className='flex flex-col items-center justify-center gap-5 relative mx-auto mt-16'>
+          <h1 className='lg:text-8xl md:text-7xl sm:text-6xl text-5xl font-semibold leading-snug text-shadow-home change-align-home title'>
             KUNDAN VALVES
             <br />
             AND FORGING

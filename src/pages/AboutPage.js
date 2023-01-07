@@ -5,6 +5,7 @@ import useWindowDimensions from "../components/getWindowDimensions";
 import { IoArrowBack } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import AboutTimeline from "../components/AboutTimeline";
 
 const AboutPage = () => {
   const [dataText] = useState({
@@ -29,7 +30,7 @@ const AboutPage = () => {
     <Container sx={{ paddingTop: "220px" }}>
       <div className='flex flex-col gap-12'>
         <button
-          onClick={() => navigate(-1)}
+          onClick={() => navigate("/")}
           className='flex items-center justify-center self-start gap-3 text-xl cursor-pointer border-b-2 border-transparent hover:border-red-500 transition duration-300'
           style={{ zIndex: "100" }}
         >
@@ -42,7 +43,14 @@ const AboutPage = () => {
             style={{ backgroundColor: "rgba(254,1,0,0.8)" }}
           ></div>
         </h1>
-        <div className='flex w-full flex-col'>
+        <AboutTimeline />
+      </div>
+    </Container>
+  );
+};
+
+{
+  /* <div className='flex w-full flex-col'>
           {dataText.listItems.map((item, i) => {
             if (width > 900) {
               return (
@@ -93,10 +101,7 @@ const AboutPage = () => {
               );
             }
           })}
-        </div>
-      </div>
-    </Container>
-  );
-};
+        </div> */
+}
 
 export default AboutPage;

@@ -175,3 +175,13 @@ background-size: 100% 100%;
     opacity: 0;
   }
 }
+
+.left-point {
+  -webkit-clip-path: polygon(10% 0%, 100% 1%, 100% 100%, 10% 100%, 0% 50%);
+  clip-path: polygon(10% 0%, 100% 1%, 100% 100%, 10% 100%, 0% 50%);
+}
+
+.right-point {
+  -webkit-clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+}
