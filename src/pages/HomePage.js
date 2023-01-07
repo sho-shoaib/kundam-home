@@ -12,10 +12,7 @@ const HomePage = () => {
       id='home'
       className='w-full h-screen flex flex-col justify-center items-center change-margin-home relative'
     >
-      <div
-        className='px-4 flex items-center absolute lg:top-0 md:top-12 top-16 right-0 left-0 change-flex-sphere change-padding-home pl-20 z-10 h-full'
-        style={{ backgroundColor: "rgba(255,255,255,0.2)" }}
-      >
+      <div className='px-4 flex items-center absolute lg:top-0 md:top-12 top-16 right-0 left-0 change-flex-sphere change-padding-home pl-20 z-10 h-full'>
         <div className='flex flex-col items-center justify-center gap-5 relative mx-auto mt-16'>
           <h1 className='lg:text-8xl md:text-7xl sm:text-6xl text-5xl font-semibold leading-snug text-shadow-home change-align-home title'>
             KUNDAN VALVES
@@ -49,8 +46,13 @@ const HomePage = () => {
         </div> */}
       </div>
 
-      <div className='absolute top-0 h-screen w-full overflow-hidden'>
-        <video autoPlay loop muted className='w-full h-full object-cover'>
+      <div className='absolute top-0 h-screen w-full overflow-hidden bg-white'>
+        <video
+          autoPlay
+          loop
+          muted
+          className='w-full h-full object-cover opacity-80'
+        >
           <source src={video} type='video/mp4' />
         </video>
       </div>
