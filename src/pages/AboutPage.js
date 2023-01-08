@@ -31,7 +31,7 @@ const AboutPage = () => {
     <>
       <NavbarMain onAbout={true} />
 
-      <Container sx={{ paddingTop: "220px" }}>
+      <Container sx={{ paddingTop: "100px" }}>
         <div className='flex flex-col gap-12'>
           <button
             onClick={() => navigate("/")}
