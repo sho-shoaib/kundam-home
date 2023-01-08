@@ -17,7 +17,7 @@ const HomePage = () => {
           <h1 className='lg:text-8xl md:text-7xl sm:text-6xl text-5xl font-semibold leading-snug text-shadow-home change-align-home title'>
             KUNDAN VALVES
             <br />
-            AND FORGING
+            AND FORGINGS
           </h1>
           <div
             className='h-3 md:w-44 w-32'
