@@ -24,7 +24,7 @@ const Footer = () => {
 
   if (width > 1400) {
     return (
-      <footer id='contact' className='relative -mt-10 w-full'>
+      <footer className='relative -mt-10 w-full'>
         <div
           className='absolute left-0 bottom-0 -z-10'
           style={{ transform: "scaleX(-1)" }}

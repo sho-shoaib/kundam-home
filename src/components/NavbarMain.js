@@ -35,7 +35,7 @@ const socials = [
   },
 ];
 
-const NavbarHome = () => {
+const NavbarHome = ({ onAbout }) => {
   const { width } = useWindowDimensions();
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
@@ -71,6 +71,7 @@ const NavbarHome = () => {
                 to='home'
                 spy={true}
                 smooth={true}
+                onClick={() => onAbout && navigate("/")}
               >
                 <p>Home</p>
               </Link>
@@ -88,6 +89,7 @@ const NavbarHome = () => {
                 to='vision-mission'
                 spy={true}
                 smooth={true}
+                onClick={() => onAbout && navigate("/")}
               >
                 <p>Vision/Mission</p>
               </Link>
@@ -98,6 +100,7 @@ const NavbarHome = () => {
                 to='approach'
                 spy={true}
                 smooth={true}
+                onClick={() => onAbout && navigate("/")}
               >
                 <p>Approach</p>
               </Link>
@@ -108,6 +111,7 @@ const NavbarHome = () => {
                 to='catalogs'
                 spy={true}
                 smooth={true}
+                onClick={() => onAbout && navigate("/")}
               >
                 <p>Catalogs</p>
               </Link>
@@ -118,6 +122,7 @@ const NavbarHome = () => {
                 to='contact'
                 spy={true}
                 smooth={true}
+                onClick={() => onAbout && navigate("/")}
               >
                 <p>Contact</p>
               </Link>
@@ -172,6 +177,7 @@ const NavbarHome = () => {
                 to='home'
                 spy={true}
                 smooth={true}
+                onClick={() => onAbout && navigate("/")}
               >
                 <p>Home</p>
               </Link>
@@ -189,6 +195,7 @@ const NavbarHome = () => {
                 to='vision-mission'
                 spy={true}
                 smooth={true}
+                onClick={() => onAbout && navigate("/")}
               >
                 <p>Vision/Mission</p>
               </Link>
@@ -199,6 +206,7 @@ const NavbarHome = () => {
                 to='approach'
                 spy={true}
                 smooth={true}
+                onClick={() => onAbout && navigate("/")}
               >
                 <p>Approach</p>
               </Link>
@@ -209,6 +217,7 @@ const NavbarHome = () => {
                 to='catalogs'
                 spy={true}
                 smooth={true}
+                onClick={() => onAbout && navigate("/")}
               >
                 <p>Catalogs</p>
               </Link>
@@ -219,6 +228,7 @@ const NavbarHome = () => {
                 to='contact'
                 spy={true}
                 smooth={true}
+                onClick={() => onAbout && navigate("/")}
               >
                 <p>Contact</p>
               </Link>
@@ -275,7 +285,10 @@ const NavbarHome = () => {
                   to='home'
                   spy={true}
                   smooth={true}
-                  onClick={toggle}
+                  onClick={() => {
+                    toggle();
+                    onAbout && navigate("/");
+                  }}
                 >
                   <p>Home</p>
                 </Link>
@@ -296,7 +309,10 @@ const NavbarHome = () => {
                   to='vision-mission'
                   spy={true}
                   smooth={true}
-                  onClick={toggle}
+                  onClick={() => {
+                    toggle();
+                    onAbout && navigate("/");
+                  }}
                 >
                   <p>Vision/Mission</p>
                 </Link>
@@ -307,7 +323,10 @@ const NavbarHome = () => {
                   to='approach'
                   spy={true}
                   smooth={true}
-                  onClick={toggle}
+                  onClick={() => {
+                    toggle();
+                    onAbout && navigate("/");
+                  }}
                 >
                   <p>Approach</p>
                 </Link>
@@ -318,7 +337,10 @@ const NavbarHome = () => {
                   to='catalogs'
                   spy={true}
                   smooth={true}
-                  onClick={toggle}
+                  onClick={() => {
+                    toggle();
+                    onAbout && navigate("/");
+                  }}
                 >
                   <p>Catalogs</p>
                 </Link>
@@ -329,7 +351,10 @@ const NavbarHome = () => {
                   to='contact'
                   spy={true}
                   smooth={true}
-                  onClick={toggle}
+                  onClick={() => {
+                    toggle();
+                    onAbout && navigate("/");
+                  }}
                 >
                   <p>Contact</p>
                 </Link>

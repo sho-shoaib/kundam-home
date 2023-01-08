@@ -6,6 +6,7 @@ import { IoArrowBack } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import AboutTimeline from "../components/AboutTimeline";
+import NavbarMain from "../components/NavbarMain";
 
 const AboutPage = () => {
   const [dataText] = useState({
@@ -27,25 +28,28 @@ const AboutPage = () => {
   }, []);
 
   return (
-    <Container sx={{ paddingTop: "220px" }}>
-      <div className='flex flex-col gap-12'>
-        <button
-          onClick={() => navigate("/")}
-          className='flex items-center justify-center self-start gap-3 text-xl cursor-pointer border-b-2 border-transparent hover:border-red-500 transition duration-300'
-          style={{ zIndex: "100" }}
-        >
-          <IoArrowBack /> Back
-        </button>
-        <h1 className='sm:text-7xl text-6xl font-semibold leading-snug text-shadow change-align-home flex flex-col items-center'>
-          ABOUT US
-          <div
-            className='w-44 h-2 mt-4'
-            style={{ backgroundColor: "rgba(254,1,0,0.8)" }}
-          ></div>
-        </h1>
-        <AboutTimeline />
-      </div>
-    </Container>
+    <>
+      <NavbarMain onAbout={true} />
+
+      <Container sx={{ paddingTop: "220px" }}>
+        <div className='flex flex-col gap-12'>
+          <button
+            onClick={() => navigate("/")}
+            className='flex items-center justify-center self-start gap-3 text-xl cursor-pointer border-b-2 border-transparent hover:border-red-500 transition duration-300'
+          >
+            <IoArrowBack /> Back
+          </button>
+          <h1 className='sm:text-7xl text-6xl font-semibold leading-snug text-shadow change-align-home flex flex-col items-center'>
+            ABOUT US
+            <div
+              className='w-44 h-2 mt-4'
+              style={{ backgroundColor: "rgba(254,1,0,0.8)" }}
+            ></div>
+          </h1>
+          <AboutTimeline />
+        </div>
+      </Container>
+    </>
   );
 };
 

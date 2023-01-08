@@ -9,6 +9,7 @@ import AboutPage from "./pages/AboutPage";
 import NavbarMain from "./components/NavbarMain";
 import Approach from "./pages/Approach";
 import { useEffect } from "react";
+import Contact from "./pages/Contact";
 
 const HomeCombined = () => {
   useEffect(() => {
@@ -23,6 +24,7 @@ const HomeCombined = () => {
         <VisionMission />
         <Approach />
         <CatalogSlider />
+        <Contact />
       </div>
     </>
   );
